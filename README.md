@@ -43,3 +43,8 @@ class batch():
 ## RMSprop
 
 ## Adam
+
+# TODO
+- Add all the pieces of code into a single jupyter notebook with related text
+- Make visualizations to compare all the algorithms
+- Write the same algorithms using pytorch autograd for a more generalized learner rather than just linear regression
