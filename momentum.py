@@ -1,3 +1,14 @@
+"""
+The momentum does what it sounds like, it decreases the time gradient descent
+takes to reach a optimum. It does so by "come on gradient descent! You're going
+in the right direction, take a hint" in other words if gradient keeps decreasing
+it will keep increasing the rate by which it decreases. Although, it is blind.
+Blind like a ball rolling off a cliff. There are better alternatives. Much
+better.
+https://en.wikipedia.org/wiki/Gradient_descent#The_momentum_method
+Code is only for linear regression, no external gradient libraries are used.
+"""
+
 import numpy as np
 import pandas as pd
 

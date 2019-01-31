@@ -1,3 +1,9 @@
+"""
+rmsprop was proposed by Geoff Hinton in his online coursera lecture. It's
+an unpublished simplified version of adadelta.
+Code is only for linear regression, no external gradient libraries are used.
+"""
+
 import numpy as np
 import pandas as pd
 
@@ -34,8 +40,7 @@ def init_theta(shape, type = 'random'):
 def init_G(size, batch_size):
     return np.zeros((batch_size, size, size))
 
-#rmsprop was proposed by Geoff Hinton in his online coursera lecture. It's
-#an unpublished simplified version of adadelta.
+
 
 def rmsprop(
             X, Y, alpha = 0.001, epochs = 100, bs = 10,

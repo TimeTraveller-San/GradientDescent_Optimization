@@ -1,3 +1,9 @@
+"""
+Batch gradient descent by Time Traveller
+https://en.wikipedia.org/wiki/Gradient_descent
+Code is only for linear regression, no external gradient libraries are used.
+"""
+
 import numpy as np
 import pandas as pd
 

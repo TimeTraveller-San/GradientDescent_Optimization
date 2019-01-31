@@ -1,3 +1,10 @@
+"""
+adagrad is adaptive gradient i.e. different weights have different personalized
+learning rates. It helps in case of sparse features where some require a very
+high learning rate while other features requires a smaller learning rate.
+Code is only for linear regression, no external gradient libraries are used.
+"""
+
 import numpy as np
 import pandas as pd
 
@@ -34,9 +41,7 @@ def init_theta(shape, type = 'random'):
 def init_G(size, batch_size):
     return np.zeros((batch_size, size, size))
 
-#adagrad is adaptive gradient i.e. different weights have different personalized
-#learning rates. It helps in case of sparse features where some require a very
-#high learning rate while other features requires a smaller learning rate
+
 
 def adagrad(X, Y, alpha, epochs = 100, bs = 10, epsilon = 1e-10):
     thetas = init_theta(X.shape[1], type = 'zeros')

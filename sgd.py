@@ -1,3 +1,7 @@
+"""
+This is just my batch gradient descent code with bs (batch size) set to 1
+"""
+
 import numpy as np
 import pandas as pd
 

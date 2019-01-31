@@ -1,3 +1,12 @@
+"""
+adadelta like adagrad is an adaptive gradient method i.e. different weights
+have different personalized learning rates. adagrad faced exploding and
+vanishing gradient issues which adadelta solves by introducing a decaying
+average. It also removes the need to set a learning rate!
+Code is only for linear regression, no external gradient libraries are used.
+
+"""
+
 import numpy as np
 import pandas as pd
 
@@ -33,11 +42,6 @@ def init_theta(shape, type = 'random'):
 
 def init_G(size, batch_size):
     return np.zeros((batch_size, size, size))
-
-#adadelta like adagrad is an adaptive gradient method i.e. different weights
-#have different personalized learning rates. adagrad faced exploding and
-#vanishing gradient issues which adadelta solves by introducing a decaying
-#average. It also removes the need to set a learning rate!
 
 def adadelta(X, Y, epochs = 100, bs = 10, gamma = 0.9, epsilon = 1e-10):
     thetas = init_theta(X.shape[1], type = 'zeros')
